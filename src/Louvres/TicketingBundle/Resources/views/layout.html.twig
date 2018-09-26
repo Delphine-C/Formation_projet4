@@ -2,11 +2,54 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
         <title>{% block title %}{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    <body class="is-preload">
+        <div id="page-wrapper">
+            <!-- Header -->
+            <section id="header">
+                <div class="container">
+
+                    <!-- Logo -->
+                    <h1 id="logo"><a href="{{ path('louvres_ticketing_homepage') }}">Musée du Louvre</a></h1>
+                    <p>Musée d'art et d'antiquités</p>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a class="icon fa-home" href="index.html"><span>Accueil</span></a></li>
+                            <li><a class="icon fa-info-circle" href="#" ><span>Tarifs</span></a></li>
+                            <li><a class="icon fa-ticket" href="left-sidebar.html"><span>Billetterie</span></a></li>
+                            <li><a class="icon fa-envelope" href="right-sidebar.html"><span>Contact</span></a></li>
+                            <li><a class="icon fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </section>
+
+            {% block body %}{% endblock %}
+
+            <!-- Footer -->
+            <section id="footer">
+                <div id="copyright" class="container">
+                    <ul class="links">
+                        <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- Scripts -->
+
+        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/jquery.dropotron.min.js') }}"></script>
+        <script src="{{ asset('assets/js/browser.min.js') }}"></script>
+        <script src="{{ asset('assets/js/breakpoints.min.js') }}"></script>
+        <script src="{{ asset('assets/js/util.js') }}"></script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
     </body>
 </html>
