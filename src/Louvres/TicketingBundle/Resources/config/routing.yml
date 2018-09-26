@@ -1,0 +1,3 @@
+louvres_ticketing_homepage:
+    path:     /
+    defaults: { _controller: LouvresTicketingBundle:Default:index }
