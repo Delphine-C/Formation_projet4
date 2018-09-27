@@ -5,3 +5,7 @@ louvres_ticketing_homepage:
 louvres_ticketing_prices:
     path:     /tarifs
     defaults: { _controller: LouvresTicketingBundle:Prices:prices }
+
+louvres_ticketing_ticketing:
+    path:     /billetterie
+    defaults: { _controller: LouvresTicketingBundle:Ticketing:index }
