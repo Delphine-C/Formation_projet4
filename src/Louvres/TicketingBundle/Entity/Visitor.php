@@ -54,12 +54,7 @@ class Visitor
      *
      * @ORM\Column(name="reduction", type="boolean")
      */
-    private $reduction;
-
-    public function __construct()
-    {
-        $this->reduction = 0;
-    }
+    private $reduction = false;
 
     /**
      * Get id

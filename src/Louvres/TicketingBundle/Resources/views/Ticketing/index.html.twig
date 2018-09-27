@@ -1,0 +1,21 @@
+{% extends "@LouvresTicketing/layout.html.twig" %}
+
+{% block title %}
+    Louvres - Billetterie
+{% endblock %}
+
+{% block body %}
+    <section id="features">
+        <div class="container">
+            <article class="box post">
+                <header>
+                    <h2>Acheter vos billets d'entrée</h2>
+                </header>
+
+                <div class="well">
+                    {{ form(form) }}
+                </div>
+            </article>
+        </div>
+    </section>
+{% endblock %}
