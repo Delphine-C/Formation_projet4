@@ -21,12 +21,15 @@ class VisitorType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name',TextType::class)
-            ->add('firstname',TextType::class)
-            ->add('country',CountryType::class)
-            ->add('birthdate',BirthdayType::class)
-            ->add('reduction',CheckboxType::class,array('required'=>false))
-            ->add('save',SubmitType::class);
+            ->add('name',TextType::class,['label' => 'Nom'])
+            ->add('firstname',TextType::class,['label' => 'Prénom'])
+            ->add('country',CountryType::class,['label' => 'Pays'])
+            ->add('birthdate',BirthdayType::class,['label' => 'Date de naissance'])
+            ->add('reduction',CheckboxType::class,[
+                'label' => "Je bénéficie d'un tarif réduit",
+                'required'=>false
+            ])
+            ->add('save',SubmitType::class,['label' => 'Valider']);
     }/**
      * {@inheritdoc}
      */

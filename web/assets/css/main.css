@@ -1649,7 +1649,7 @@ input::-moz-focus-inner {
 		font-weight: 600;
 		text-transform: uppercase;
 		color: #888;
-		display: block;
+		display: inline-block;
 		margin: 0 0 1em 0;
 	}
 
@@ -1671,7 +1671,22 @@ input::-moz-focus-inner {
 		border-radius: 4px;
 		line-height: 1.25em;
 		padding: 0.75em 1em 0.75em 1em;
+        margin-bottom: 1em;
 	}
+
+	form select:not(#louvres_ticketingbundle_visitor_country) {
+		width: 25%;
+		display: inline-block;
+	}
+
+    input[type="checkbox"] {
+        height: 1em;
+        width: 1em;
+    }
+
+    form button {
+        margin-bottom: 2em;
+    }
 
 		form input[type="text"]:focus,
 		form input[type="email"]
