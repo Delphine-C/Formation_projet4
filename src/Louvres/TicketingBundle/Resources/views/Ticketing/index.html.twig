@@ -12,14 +12,18 @@
                     <h2>Acheter vos billets d'entrée</h2>
                 </header>
 
-                <div class="well">
-                    {{ form(form_first) }}
+                <div id="divFormFirst" class="well">
+                    {{ form(form_first,{'attr':{'id':'form_first'}}) }}
                 </div>
 
-                <div class="well">
-                    {{ form(form) }}
+                <div id="divFormVisitor" class="well">
+                    {{ form(form,{'attr':{'id':'form_visitor'}}) }}
                 </div>
             </article>
         </div>
     </section>
+{% endblock %}
+
+{% block scriptJS %}
+    {{ asset('assets/js/ticketing.js') }}
 {% endblock %}

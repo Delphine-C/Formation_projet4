@@ -23,15 +23,20 @@ class BookingType extends AbstractType
         ];
 
         $builder
-            ->add('dateVisit',DateType::class)
+            ->add('dateVisit',DateType::class,['label' => 'Choisissez une date'])
             ->add('type',ChoiceType::class, [
                 'choices' => $radioChoices,
                 'expanded' => true,
                 'multiple' => false,
                 'data' => 1,
+                'label' => 'Choisissez un type de billet',
                 ])
-            ->add('quantity',IntegerType::class,array('attr'=> ['min'=> 1],'data' => 1))
-            ->add('save',SubmitType::class);
+            ->add('quantity',IntegerType::class,[
+                'attr'=> ['min'=> 1],
+                'data' => 1,
+                'label' => 'Nombre de visiteur',
+                ])
+            ->add('save',SubmitType::class,['label' => 'valider']);
     }/**
      * {@inheritdoc}
      */

@@ -3,6 +3,7 @@
 namespace Louvres\TicketingBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * Booking
@@ -55,6 +56,11 @@ class Booking
      * @ORM\Column(name="quantity", type="integer")
      */
     private $quantity;
+
+    public function __construct()
+    {
+        $this->dateVisit = new \DateTime();
+    }
 
     /**
      * Get id
