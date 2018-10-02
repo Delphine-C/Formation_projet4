@@ -9,3 +9,12 @@ louvres_ticketing_prices:
 louvres_ticketing_ticketing:
     path:     /billetterie
     defaults: { _controller: LouvresTicketingBundle:Ticketing:index }
+
+louvres_ticketing_order:
+    path:     /commande
+    defaults: { _controller: LouvresTicketingBundle:Order:index }
+
+louvres_ticketing_payment:
+    path:     /paiement
+    defaults: { _controller: LouvresTicketingBundle:Order:payment }
+
