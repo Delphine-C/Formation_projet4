@@ -28,12 +28,10 @@ class BookingType extends AbstractType
                 'choices' => $radioChoices,
                 'expanded' => true,
                 'multiple' => false,
-                'data' => 1,
                 'label' => 'Choisissez un type de billet',
                 ])
             ->add('quantity',IntegerType::class,[
                 'attr'=> ['min'=> 1,'max'=> 10],
-                'data' => 1,
                 'label' => 'Nombre de visiteur',
                 ])
             ->add('save',SubmitType::class,['label' => 'Valider']);

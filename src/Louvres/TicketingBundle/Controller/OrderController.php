@@ -11,12 +11,20 @@ namespace Louvres\TicketingBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Louvres\TicketingBundle\Controller\PriceController;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class OrderController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        return $this->render('@LouvresTicketing/Ticketing/order.html.twig',['apiPublic'=>$this->container->getParameter('API_public')]);
+        $priceC = new PriceController();
+
+        $prix = $priceC->calculPrix($request);
+        $session = new Session();
+        $session->set('prix',$prix);
+
+        return $this->render('@LouvresTicketing/Ticketing/order.html.twig',['apiPublic'=>$this->container->getParameter('API_public'),'prix'=>$prix]);
     }
 
     public function paymentAction(Request $request)
@@ -24,19 +32,22 @@ class OrderController extends Controller
         $apiSecret = $this->container->getParameter('API_secret');
         \Stripe\Stripe::setApiKey($apiSecret);
 
+        $session=$request->getSession();
+        $prix = $session->get('prix') * 100;
+
         try {
             \Stripe\Charge::create(array(
-                "amount" => 2000,
+                "amount" => $prix,
                 "currency" => "eur",
                 "source" => $request->request->get('stripeToken'),
                 "description" => "Paiement de test" // "Paiement de .'$variable'." ou nom client
             ));
             $this->addFlash("success","Bravo ça marche !");
-            return $this->indexAction();
+            return $this->indexAction($request);
 
         } catch(\Stripe\Error\Card $e) {
             $this->addFlash("error","Snif ça marche pas :(");
-            return $this->indexAction();
+            return $this->indexAction($request);
         }
     }
 }

@@ -6,7 +6,7 @@
 
 {% block body %}
     <div>
-        La montant de la commande s'élève à euros.
+        La montant de la commande s'élève à {{ prix }} euros.
     </div>
     <form action="{{ path("louvres_ticketing_payment") }}" method="post" id="payment-form">
         <div class="form-row">

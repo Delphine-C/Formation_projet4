@@ -60,6 +60,8 @@ class Booking
     public function __construct()
     {
         $this->dateVisit = new \DateTime();
+        $this->quantity = 1;
+        $this->type = 1;
     }
 
     /**
