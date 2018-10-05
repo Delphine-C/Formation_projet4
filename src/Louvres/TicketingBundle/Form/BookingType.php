@@ -32,11 +32,11 @@ class BookingType extends AbstractType
                 'label' => 'Choisissez un type de billet',
                 ])
             ->add('quantity',IntegerType::class,[
-                'attr'=> ['min'=> 1],
+                'attr'=> ['min'=> 1,'max'=> 10],
                 'data' => 1,
                 'label' => 'Nombre de visiteur',
                 ])
-            ->add('save',SubmitType::class,['label' => 'valider']);
+            ->add('save',SubmitType::class,['label' => 'Valider']);
     }/**
      * {@inheritdoc}
      */

@@ -26,10 +26,9 @@ class VisitorType extends AbstractType
             ->add('country',CountryType::class,['label' => 'Pays'])
             ->add('birthdate',BirthdayType::class,['label' => 'Date de naissance'])
             ->add('reduction',CheckboxType::class,[
-                'label' => "Je bénéficie d'un tarif réduit",
+                'label' => "Cette personne bénéficie d'un tarif réduit",
                 'required'=>false
-            ])
-            ->add('save',SubmitType::class,['label' => 'Valider']);
+            ]);
     }/**
      * {@inheritdoc}
      */

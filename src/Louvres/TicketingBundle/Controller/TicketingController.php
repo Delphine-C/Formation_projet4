@@ -9,21 +9,28 @@
 namespace Louvres\TicketingBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Request;
 use Louvres\TicketingBundle\Entity\Booking;
 use Louvres\TicketingBundle\Form\BookingType;
-use Louvres\TicketingBundle\Entity\Visitor;
-use Louvres\TicketingBundle\Form\VisitorType;
 
 class TicketingController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $booking = new Booking();
-        $form_first = $this->createForm(BookingType::class,$booking);
+        $formBooking = $this->createForm(BookingType::class,$booking);
 
-        $visitor = new Visitor();
-        $form = $this->createForm(VisitorType::class,$visitor);
+        if ($request->isMethod('POST') && $formBooking->handleRequest($request)->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($booking);
 
-        return $this->render('@LouvresTicketing/Ticketing/index.html.twig',array('form_first'=>$form_first->createView(),'form'=>$form->createView()));
+            $session = new Session();
+            $session->set('resa',$booking);
+
+            return $this->redirectToRoute('louvres_ticketing_visitor',['nbVisitor'=>$session->get('resa')->getQuantity()]);
+        }
+
+        return $this->render('@LouvresTicketing/Ticketing/index.html.twig',['form'=>$formBooking->createView()]);
     }
 }

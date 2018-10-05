@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block body %}
+    <div>
+        La montant de la commande s'élève à euros.
+    </div>
     <form action="{{ path("louvres_ticketing_payment") }}" method="post" id="payment-form">
         <div class="form-row">
             <label for="card-element">
@@ -23,10 +26,7 @@
 {% endblock %}
 
 {% block scriptJS %}
-    https://js.stripe.com/v3/
-{% endblock %}
-
-{% block scriptJS %}
+    <script src="https://js.stripe.com/v3/"></script>
     <script>
         var stripe = Stripe('{{ apiPublic }}');
         var elements = stripe.elements();
