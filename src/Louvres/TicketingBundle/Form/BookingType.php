@@ -3,6 +3,8 @@
 namespace Louvres\TicketingBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -23,6 +25,8 @@ class BookingType extends AbstractType
         ];
 
         $builder
+            ->add('name',TextType::class,['label' => 'Renseigner votre nom'])
+            ->add('email',EmailType::class,['label' => 'Renseigner votre adresse mail'])
             ->add('dateVisit',DateType::class,['label' => 'Choisissez une date'])
             ->add('type',ChoiceType::class, [
                 'choices' => $radioChoices,

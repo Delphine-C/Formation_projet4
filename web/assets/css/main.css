@@ -1654,7 +1654,7 @@ input::-moz-focus-inner {
 	}
 
 	form input[type="text"],
-	form input[type="email"]
+	form input[type="email"],
 	input[type="password"],
 	form select,
 	form textarea {
