@@ -3,6 +3,7 @@
 namespace Louvres\TicketingBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Visitor
@@ -25,6 +26,13 @@ class Visitor
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *     min=2,
+     *     max=20,
+     *     minMessage = "La valeur saisie ne contient pas assez de caractères.",
+     *     maxMessage = "La longueur de la chaîne de caractères est trop longue."
+     * )
      */
     private $name;
 
@@ -32,6 +40,13 @@ class Visitor
      * @var string
      *
      * @ORM\Column(name="firstname", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *     min=2,
+     *     max=20,
+     *     minMessage = "La valeur saisie ne contient pas assez de caractères.",
+     *     maxMessage = "La longueur de la chaîne de caractères est trop longue."
+     * )
      */
     private $firstname;
 
