@@ -34,13 +34,14 @@ class OrderController extends Controller
 
         $session=$request->getSession();
         $prix = $session->get('prix') * 100;
+        $description = "Paiement de ".$session->get('resa')->getName();
 
         try {
             \Stripe\Charge::create(array(
                 "amount" => $prix,
                 "currency" => "eur",
                 "source" => $request->request->get('stripeToken'),
-                "description" => "Paiement de test" // "Paiement de .'$variable'." ou nom client
+                "description" => $description
             ));
             $this->addFlash("success","Bravo ça marche !");
             return $this->indexAction($request);

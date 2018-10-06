@@ -36,7 +36,6 @@ class VisitorController extends Controller
             $session = new Session();
             $session->set('visitors',$visitor);
 
-        //    var_dump($session->get('visitors')[1]->getName()) ;
             return $this->redirectToRoute('louvres_ticketing_order');
         }
 
