@@ -7,6 +7,12 @@
 {% block body %}
     <section id="features">
         <div class="container">
+            {% for message in app.flashes('notice') %}
+                <div class="flash-notice">
+                    <span class="icon check"></span> {{ message }}
+                </div>
+            {% endfor %}
+
             <article class="box post">
                 <header>
                     <h2>Acheter vos billets d'entrée 1/2</h2>

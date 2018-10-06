@@ -1862,6 +1862,18 @@ input::-moz-focus-inner {
 		margin: 0 0 2.5em 0;
 	}
 
+/* Flash message*/
+
+.flash-notice {
+	color: #398F31;
+	background-color: #D9F7E1;
+	border-color: #BCF1C8;
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
 /* Icons */
 
 	.icon {

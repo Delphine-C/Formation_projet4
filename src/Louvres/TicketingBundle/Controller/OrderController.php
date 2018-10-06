@@ -43,12 +43,12 @@ class OrderController extends Controller
                 "source" => $request->request->get('stripeToken'),
                 "description" => $description
             ));
-            $this->addFlash("success","Bravo ça marche !");
-            return $this->indexAction($request);
+            $this->addFlash('notice',"Votre commande a été passée avec succès. Vos billets vous ont été envoyés par mail.");
+            return $this->redirectToRoute('louvres_ticketing_booking');
 
         } catch(\Stripe\Error\Card $e) {
-            $this->addFlash("error","Snif ça marche pas :(");
-            return $this->indexAction($request);
+            $this->addFlash('notice',"Snif ça marche pas :(");
+            return $this->redirectToRoute('louvres_ticketing_booking');
         }
     }
 }
