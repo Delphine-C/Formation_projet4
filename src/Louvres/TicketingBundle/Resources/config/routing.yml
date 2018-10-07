@@ -24,5 +24,5 @@ louvres_ticketing_order:
 
 louvres_ticketing_payment:
     path:     /paiement
-    defaults: { _controller: LouvresTicketingBundle:Order:payment }
+    defaults: { _controller: LouvresTicketingBundle:Payment:payment }
 
