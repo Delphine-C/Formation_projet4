@@ -36,13 +36,15 @@ class OrderController extends Controller
         $session=$request->getSession();
         $prix = $session->get('prix') * 100;
         $description = "Paiement de ".$session->get('resa')->getName();
+        $email = $session->get('resa')->getEmail();
 
         try {
             \Stripe\Charge::create(array(
                 "amount" => $prix,
                 "currency" => "eur",
                 "source" => $request->request->get('stripeToken'),
-                "description" => $description
+                "description" => $description,
+                "receipt_email" => $email,
             ));
 
             $booking = $session->get('resa');
