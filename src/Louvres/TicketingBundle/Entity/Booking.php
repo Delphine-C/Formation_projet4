@@ -66,6 +66,13 @@ class Booking
      */
     private $quantity;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="price", type="integer")
+     */
+    private $price;
+
     public function __construct()
     {
         $this->dateVisit = new \DateTime();
@@ -194,25 +201,25 @@ class Booking
     }
 
     /**
-     * Set date
+     * Set price
      *
-     * @param \DateTime $date
+     * @param integer $price
      *
      * @return Booking
      */
-    public function setDate($date)
+    public function setPrice($price)
     {
-        $this->date = $date;
+        $this->price = $price;
     }
 
     /**
-     * Get date
+     * Get price
      *
-     * @return \DateTime
+     * @return int
      */
-    public function getDate()
+    public function getPrice()
     {
-        return $this->date;
+        return $this->price;
     }
 }
 
