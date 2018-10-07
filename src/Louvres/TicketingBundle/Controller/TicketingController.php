@@ -22,9 +22,6 @@ class TicketingController extends Controller
         $formBooking = $this->createForm(BookingType::class,$booking);
 
         if ($request->isMethod('POST') && $formBooking->handleRequest($request)->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($booking);
-
             $session = new Session();
             $session->set('resa',$booking);
 
