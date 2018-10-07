@@ -23,6 +23,18 @@ class OrderController extends Controller
         $session = new Session();
         $session->set('prix',$prix);
 
-        return $this->render('@LouvresTicketing/Ticketing/order.html.twig',['apiPublic'=>$this->container->getParameter('API_public'),'prix'=>$prix]);
+        if ($session->get('resa')->getType() === "1") {
+            $type ="Journée";
+        } else {
+            $type = "Demi-journée";
+        }
+
+        return $this->render('@LouvresTicketing/Ticketing/order.html.twig',[
+            'apiPublic'=>$this->container->getParameter('API_public'),
+            'nb' => $session->get('resa')->getQuantity(),
+            'type' => $type,
+            'date' => $session->get('resa')->getDatevisit()->format("d F Y"),
+            'prix'=>$prix,
+        ]);
     }
 }
