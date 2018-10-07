@@ -12,6 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Louvres\TicketingBundle\Entity\Visitor;
+use Louvres\TicketingBundle\Controller\AgeController;
 
 class PriceController extends Controller
 {
@@ -22,13 +23,15 @@ class PriceController extends Controller
         $prix=0;
         $nbVisitor = $session->get('resa')->getQuantity();
 
+        $ageC = new AgeController();
+
         for ($i=0;$i < $nbVisitor;$i++)
         {
             $visitor = $session->get('visitors')[$i];
             $reduction = $visitor->getReduction();
             $birthdate = $visitor->getBirthdate();
 
-            $age = $this->calculAge($request,$birthdate);
+            $age = $ageC->calculAge($request,$birthdate);
 
             $prixVisitor = $this->calculPrixByVisitor($request,$age,$reduction);
             $prix=$prix+$prixVisitor;
@@ -67,14 +70,4 @@ class PriceController extends Controller
         }
         return $prix;
     }
-
-    public function calculAge(Request $request,$birthdate)
-    {
-        $today = new \Datetime();
-        $age = $today->diff($birthdate,true)->y;
-
-        return $age;
-    }
-
-
 }
