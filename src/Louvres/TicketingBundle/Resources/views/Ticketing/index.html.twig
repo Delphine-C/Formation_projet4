@@ -25,3 +25,63 @@
         </div>
     </section>
 {% endblock %}
+
+{% block scriptJS %}
+    <script>
+        $(function() {
+            $.datepicker.setDefaults({
+                prevText: 'Précédent',
+                nextText: 'Suivant',
+                monthNamesShort: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+                dayNamesMin: ['D','L','M','M','J','V','S'],
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+            });
+
+            function disableDates(date) {
+                var month = date.getMonth();
+                var day = date.getDay();
+                var currDate = date.getDate();
+
+                if (day == 2) {
+                    return [false] ;
+                } else if (currDate == 1 && (month == 10 || month == 4)){
+                    return [false];
+                } else if (currDate == 25 && month == 11){
+                    return [false];
+                }
+                else {
+                    return [true] ;
+                }
+            }
+
+            function showHide() {
+                $('#louvres_ticketingbundle_booking_type_0').hide();
+                $('label[for="louvres_ticketingbundle_booking_type_0"').hide();
+                $('#louvres_ticketingbundle_booking_type_1').attr('checked', true);
+            }
+
+            if(new Date().getHours() >= 14) {
+                showHide();
+            }
+
+            $(".datepicker").datepicker({
+                minDate: new Date(),
+                changeMonth: true,
+                changeYear: true,
+                beforeShowDay: disableDates,
+                onSelect: function(dateText, inst){
+                    var today = new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'numeric', day: 'numeric' });
+
+                    if(dateText === today && new Date().getHours() >= 14) {
+                        showHide();
+                    } else {
+                        $('#louvres_ticketingbundle_booking_type_0').show().attr('checked', true);
+                        $('label[for="louvres_ticketingbundle_booking_type_0"').show();
+
+                    }
+                }
+            });
+        })
+    </script>
+{% endblock %}

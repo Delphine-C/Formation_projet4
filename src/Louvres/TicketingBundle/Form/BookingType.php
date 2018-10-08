@@ -27,7 +27,13 @@ class BookingType extends AbstractType
         $builder
             ->add('name',TextType::class,['label' => 'Renseigner votre nom'])
             ->add('email',EmailType::class,['label' => 'Renseigner votre adresse mail'])
-            ->add('dateVisit',DateType::class,['label' => 'Choisissez une date'])
+            ->add('dateVisit',DateType::class,[
+                'label' => 'Choisissez une date',
+                'widget' => 'single_text',
+                'html5' => false,
+                'format' => 'dd/MM/yyyy',
+                'attr' => ['class' => 'datepicker']
+                ])
             ->add('type',ChoiceType::class, [
                 'choices' => $radioChoices,
                 'expanded' => true,
