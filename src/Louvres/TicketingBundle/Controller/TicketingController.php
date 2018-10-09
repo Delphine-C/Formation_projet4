@@ -25,7 +25,25 @@ class TicketingController extends Controller
             $session = new Session();
             $session->set('resa',$booking);
 
-            return $this->redirectToRoute('louvres_ticketing_visitor',['nbVisitor'=>$session->get('resa')->getQuantity()]);
+            $selectedDate = $this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('LouvresTicketingBundle:Booking')
+                ->findByDateVisit($session->get('resa')->getDateVisit());
+
+            $nbVisitor = 0;
+            foreach ($selectedDate as $date)
+            {
+                $nbVisitor += $date->getQuantity();
+            }
+
+            if ($nbVisitor > 1000) {
+                $this->addFlash('notice',"Il n'y a plus de billets disponibles pour le jour sélectionné. Veuillez choisir une autre date.");
+
+                return $this->redirectToRoute('louvres_ticketing_booking');
+            } else {
+                return $this->redirectToRoute('louvres_ticketing_visitor',['nbVisitor'=>$session->get('resa')->getQuantity()]);
+            }
         }
 
         return $this->render('@LouvresTicketing/Ticketing/index.html.twig',['form'=>$formBooking->createView()]);
