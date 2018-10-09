@@ -82,6 +82,14 @@
                     }
                 }
             });
+
+            // Flash message
+            if(! $('.flash-notice').html().match("/succès/")) {
+                $('.flash-notice')
+                    .css('color','#D61E1E')
+                    .css('background-color','#F7D9D9')
+                    .css('border-color','#F1BCBC');
+            }
         })
     </script>
 {% endblock %}
