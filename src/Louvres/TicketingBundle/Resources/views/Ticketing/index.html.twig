@@ -9,7 +9,7 @@
         <div class="container">
             {% for message in app.flashes('notice') %}
                 <div class="flash-notice">
-                    <span class="icon check"></span> {{ message }}
+                    {{ message }}
                 </div>
             {% endfor %}
 
@@ -84,7 +84,8 @@
             });
 
             // Flash message
-            if(! $('.flash-notice').html().match("/succès/")) {
+            var regex = /mail/;
+            if(! regex.test($('.flash-notice').html())) {
                 $('.flash-notice')
                     .css('color','#D61E1E')
                     .css('background-color','#F7D9D9')
