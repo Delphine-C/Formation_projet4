@@ -26,3 +26,7 @@ louvres_ticketing_payment:
     path:     /paiement
     defaults: { _controller: LouvresTicketingBundle:Payment:payment }
 
+louvres_ticketing_credits:
+    path:     /credits
+    defaults: { _controller: LouvresTicketingBundle:Credits:index }
+

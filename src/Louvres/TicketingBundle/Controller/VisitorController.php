@@ -26,7 +26,10 @@ class VisitorController extends Controller
         }
 
         $formVisitors = $this
-            ->createForm(CollectionType::class,$visitor,['entry_type' => VisitorType::class])
+            ->createForm(CollectionType::class,$visitor,[
+                'entry_type' => VisitorType::class,
+                'entry_options' => ['label'=> false],
+                ])
             ->add('save',SubmitType::class,['label'=>'Passer commande']);
 
         if ($request->isMethod('POST') && $formVisitors ->handleRequest($request)->isValid()) {

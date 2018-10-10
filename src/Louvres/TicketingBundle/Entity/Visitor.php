@@ -71,6 +71,11 @@ class Visitor
      */
     private $reduction = false;
 
+    public function __construct()
+    {
+        $this->country="FR";
+    }
+
     /**
      * Get id
      *
