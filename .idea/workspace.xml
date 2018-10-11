@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eabc95ce-a7b4-41a5-ae91-6e7e963c24f9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,29 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TicketingController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="VisitorController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="36" selection-end-column="37" />
+            <state relative-caret-position="114">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PaymentController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+            <state relative-caret-position="38">
+              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="e#147#204#0#PHP" expanded="true" />
               </folding>
@@ -124,10 +114,10 @@
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Visitor.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php" />
-        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/VisitorType.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php" />
+        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php" />
       </list>
     </option>
   </component>
@@ -188,9 +178,9 @@
       <path value="$PROJECT_DIR$/vendor/twig/extensions" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="733" />
-    <option name="y" value="7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="694" />
+    <option name="y" value="1" />
     <option name="width" value="1215" />
     <option name="height" value="1001" />
   </component>
@@ -355,18 +345,18 @@
       <workItem from="1539072528104" duration="8599000" />
       <workItem from="1539161279082" duration="10928000" />
       <workItem from="1539180755563" duration="1348000" />
-      <workItem from="1539245740592" duration="8408000" />
+      <workItem from="1539245740592" duration="8886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158206000" />
+    <option name="totallyTimeSpent" value="158684000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="489" y="5" width="810" height="667" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.04648241" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.06245121" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.1305842" />
@@ -669,23 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="36" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <element signature="e#147#204#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-634">
@@ -722,8 +695,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="435">
+          <caret line="38" column="10" lean-forward="true" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#147#204#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
