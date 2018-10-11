@@ -25,7 +25,13 @@ class BookingType extends AbstractType
         ];
 
         $builder
-            ->add('name',TextType::class,['label' => 'Renseigner votre nom'])
+            ->add('name',TextType::class,[
+                'label' => 'Renseigner votre nom',
+                'attr' => [
+                    'minLength' => 2,
+                    'maxLength' => 40
+                ]
+            ])
             ->add('email',EmailType::class,['label' => 'Renseigner votre adresse mail'])
             ->add('dateVisit',DateType::class,[
                 'label' => 'Choisissez une date',
