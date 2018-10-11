@@ -2,16 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: Delphine_Corneil
- * Date: 07/10/2018
- * Time: 12:54
+ * Date: 11/10/2018
+ * Time: 15:02
  */
 
-namespace Louvres\TicketingBundle\Controller;
+namespace Louvres\TicketingBundle\Tools;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class AgeController extends Controller
+class AgeCalculator
 {
     public function calculAge(Request $request,$birthdate)
     {

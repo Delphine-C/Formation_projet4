@@ -10,20 +10,18 @@ namespace Louvres\TicketingBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Louvres\TicketingBundle\Controller\PriceController;
-use Symfony\Component\HttpFoundation\Session\Session;
+use Louvres\TicketingBundle\Tools\PriceCalculator;
 
 class OrderController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $priceC = new PriceController();
+        $priceC = new PriceCalculator();
 
         $prix = $priceC->calculPrix($request);
-        $session = new Session();
-        $session->set('prix',$prix);
+        $request->getSession()->set('prix',$prix);
 
-        if ($session->get('resa')->getType() === "1") {
+        if ($request->getSession()->get('resa')->getType() === "1") {
             $type ="Journée";
         } else {
             $type = "Demi-journée";
@@ -31,9 +29,9 @@ class OrderController extends Controller
 
         return $this->render('@LouvresTicketing/Ticketing/order.html.twig',[
             'apiPublic'=>$this->container->getParameter('API_public'),
-            'nb' => $session->get('resa')->getQuantity(),
+            'nb' => $request->getSession()->get('resa')->getQuantity(),
             'type' => $type,
-            'date' => $session->get('resa')->getDatevisit()->format("d F Y"),
+            'date' => $request->getSession()->get('resa')->getDatevisit()->format("d F Y"),
             'prix'=>$prix,
         ]);
     }

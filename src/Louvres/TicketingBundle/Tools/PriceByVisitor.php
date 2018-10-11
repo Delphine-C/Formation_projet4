@@ -2,16 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: Delphine_Corneil
- * Date: 07/10/2018
- * Time: 13:01
+ * Date: 11/10/2018
+ * Time: 15:07
  */
 
-namespace Louvres\TicketingBundle\Controller;
+namespace Louvres\TicketingBundle\Tools;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class PriceByVisitorController extends Controller
+class PriceByVisitor
 {
     const NORMAL = 16;
     const CHILD = 8;
@@ -22,8 +21,7 @@ class PriceByVisitorController extends Controller
 
     public function calculPrixByVisitor(Request $request,$age,$reduction)
     {
-        $session=$request->getSession();
-        $jour = $session->get('resa')->getType();
+        $jour =$request->getSession()->get('resa')->getType();
 
         if(!$jour) {
             if ($age < 4) {
