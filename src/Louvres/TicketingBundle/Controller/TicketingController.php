@@ -42,9 +42,7 @@ class TicketingController extends Controller
                 return $this->redirectToRoute('louvres_ticketing_booking');
             }
 
-            return $this->redirectToRoute('louvres_ticketing_visitor',[
-                'nbVisitor'=>$booking->getQuantity()
-            ]);
+            return $this->redirectToRoute('louvres_ticketing_visitor');
         }
 
         return $this->render('@LouvresTicketing/Ticketing/index.html.twig',[

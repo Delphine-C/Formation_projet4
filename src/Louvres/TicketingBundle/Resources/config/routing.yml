@@ -13,10 +13,8 @@ louvres_ticketing_booking:
         id: \d+
 
 louvres_ticketing_visitor:
-    path:     /billetterie/{nbVisitor}
+    path:     /billetterie2
     defaults: { _controller: LouvresTicketingBundle:Visitor:index }
-    requirements:
-        nbVisitor: \d+
 
 louvres_ticketing_order:
     path:     /commande

@@ -18,8 +18,10 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class VisitorController extends Controller
 {
-    public function indexAction(Request $request, $nbVisitor)
+    public function indexAction(Request $request)
     {
+        $nbVisitor = $request->getSession()->get('resa')->getQuantity();
+
         for ($i=0;$i < $nbVisitor;$i++)
         {
             $visitor[] = new Visitor();
@@ -30,14 +32,11 @@ class VisitorController extends Controller
                 'entry_type' => VisitorType::class,
                 'entry_options' => ['label'=> false],
                 ])
-            ->add('save',SubmitType::class,['label'=>'Passer commande']);
+            ->add('save',SubmitType::class,['label'=>'Passer commande'])
+            ->handleRequest($request);
 
-        if ($request->isMethod('POST') && $formVisitors ->handleRequest($request)->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            //$em->persist($visitor);
-
-            $session = new Session();
-            $session->set('visitors',$visitor);
+        if ($formVisitors->isSubmitted() && $formVisitors->isValid()) {
+            $request->getSession()->set('visitors',$visitor);
 
             return $this->redirectToRoute('louvres_ticketing_order');
         }
