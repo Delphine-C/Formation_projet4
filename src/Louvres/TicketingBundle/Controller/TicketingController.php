@@ -19,17 +19,16 @@ class TicketingController extends Controller
     public function indexAction(Request $request)
     {
         $booking = new Booking();
-        $formBooking = $this->createForm(BookingType::class,$booking);
+        $formBooking = $this->createForm(BookingType::class,$booking)->handleRequest($request);
 
-        if ($request->isMethod('POST') && $formBooking->handleRequest($request)->isValid()) {
-            $session = new Session();
-            $session->set('resa',$booking);
+        if ($formBooking->isSubmitted() && $formBooking->isValid()) {
+            $request->getSession()->set('resa',$booking);
 
             $selectedDate = $this
                 ->getDoctrine()
                 ->getManager()
                 ->getRepository('LouvresTicketingBundle:Booking')
-                ->findByDateVisit($session->get('resa')->getDateVisit());
+                ->findByDateVisit($booking->getDateVisit());
 
             $nbVisitor = 0;
             foreach ($selectedDate as $date)
@@ -41,11 +40,15 @@ class TicketingController extends Controller
                 $this->addFlash('notice',"Il n'y a plus de billets disponibles pour le jour sélectionné. Veuillez choisir une autre date.");
 
                 return $this->redirectToRoute('louvres_ticketing_booking');
-            } else {
-                return $this->redirectToRoute('louvres_ticketing_visitor',['nbVisitor'=>$session->get('resa')->getQuantity()]);
             }
+
+            return $this->redirectToRoute('louvres_ticketing_visitor',[
+                'nbVisitor'=>$booking->getQuantity()
+            ]);
         }
 
-        return $this->render('@LouvresTicketing/Ticketing/index.html.twig',['form'=>$formBooking->createView()]);
+        return $this->render('@LouvresTicketing/Ticketing/index.html.twig',[
+            'form'=>$formBooking->createView()
+        ]);
     }
 }
