@@ -36,8 +36,8 @@ class TicketingController extends Controller
                 $nbVisitor += $date->getQuantity();
             }
 
-            if ($nbVisitor > 1000) {
-                $this->addFlash('notice',"Il n'y a plus de billets disponibles pour le jour sélectionné. Veuillez choisir une autre date.");
+            if ($nbVisitor > 5) {
+                $this->addFlash('error',"Il n'y a plus de billets disponibles pour le jour sélectionné. Veuillez choisir une autre date.");
 
                 return $this->redirectToRoute('louvres_ticketing_booking');
             }

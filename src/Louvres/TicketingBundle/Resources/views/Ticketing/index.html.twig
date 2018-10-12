@@ -13,6 +13,12 @@
                 </div>
             {% endfor %}
 
+            {% for message in app.flashes('error') %}
+                <div class="flash-error">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
             <article class="box post">
                 <header>
                     <h2>Acheter vos billets d'entrée 1/2</h2>
@@ -82,15 +88,6 @@
                     }
                 }
             });
-
-            // Flash message
-            var regex = /mail/;
-            if(! regex.test($('.flash-notice').html())) {
-                $('.flash-notice')
-                    .css('color','#D61E1E')
-                    .css('background-color','#F7D9D9')
-                    .css('border-color','#F1BCBC');
-            }
         })
     </script>
 {% endblock %}

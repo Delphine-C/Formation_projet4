@@ -9,8 +9,6 @@ louvres_ticketing_prices:
 louvres_ticketing_booking:
     path:     /billetterie
     defaults: { _controller: LouvresTicketingBundle:Ticketing:index }
-    requirements:
-        id: \d+
 
 louvres_ticketing_visitor:
     path:     /billetterie2

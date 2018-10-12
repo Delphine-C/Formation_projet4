@@ -28,8 +28,8 @@ class PaymentController extends Controller
                 "description" => sprintf("Paiement de %s",$request->getSession()->get('resa')->getName()),
             ));
         } catch(\Stripe\Error\Card $e) {
-            $this->addFlash('notice',"Le paiement de votre commande a rencontré un problème. Veuillez recommencer l'opération.");
-            return $this->redirectToRoute('louvres_ticketing_booking');
+            $this->addFlash('error',"Le paiement de votre commande a rencontré un problème. Veuillez recommencer l'opération.");
+            return $this->redirectToRoute('louvres_ticketing_order');
         }
 
         $booking = $request->getSession()->get('resa');

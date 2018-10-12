@@ -1903,6 +1903,16 @@ button.alt:active,
 	border-radius: 4px;
 }
 
+.flash-error{
+	color: #D61E1E;
+	background-color: #F7D9D9;
+	border-color: #F1BCBC;
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
 /* Icons */
 
 .icon {

@@ -9,6 +9,12 @@
     <div class="container">
         <article class="box post">
             <div>
+                {% for message in app.flashes('error') %}
+                    <div class="flash-error">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
                 <h2>Récapitulatif de votre commande</h2>
                 <p class="p-content">
                     Vous avez réservé {{ nb }} billet(s) {{ type }} pour le {{ date | localizeddate('full','none') }}.<br>
