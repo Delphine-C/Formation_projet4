@@ -23,6 +23,14 @@ class Visitor
     private $id;
 
     /**
+     * @var object
+     *
+     * @ORM\ManyToOne(targetEntity="Louvres\TicketingBundle\Entity\Booking", inversedBy="visitors")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $booking;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
@@ -194,6 +202,26 @@ class Visitor
     public function getReduction()
     {
         return $this->reduction;
+    }
+
+    /**
+     * Set booking
+     *
+     * @param object $booking
+     */
+    public function setBooking(Booking $booking)
+    {
+        $this->booking = $booking;
+    }
+
+    /**
+     * Get booking
+     *
+     * @return object booking
+     */
+    public function getBooking()
+    {
+        return $this->booking;
     }
 }
 

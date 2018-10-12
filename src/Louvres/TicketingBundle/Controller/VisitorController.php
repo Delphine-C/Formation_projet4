@@ -38,6 +38,11 @@ class VisitorController extends Controller
         if ($formVisitors->isSubmitted() && $formVisitors->isValid()) {
             $request->getSession()->set('visitors',$visitor);
 
+            for ($i=0;$i < $nbVisitor;$i++) {
+                $visitor = $request->getSession()->get('visitors')[$i];
+                $request->getSession()->get('resa')->addVisitor($visitor);
+                }
+
             return $this->redirectToRoute('louvres_ticketing_order');
         }
 

@@ -5,6 +5,7 @@ namespace Louvres\TicketingBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Booking
@@ -73,11 +74,18 @@ class Booking
      */
     private $price;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Louvres\TicketingBundle\Entity\Visitor",
+     *     cascade={"persist"}, mappedBy="booking")
+     */
+    private $visitors;
+
     public function __construct()
     {
         $this->dateVisit = new \DateTime();
         $this->quantity = 1;
         $this->type = 1;
+        $this->visitors = new ArrayCollection();
     }
 
     /**
@@ -220,6 +228,17 @@ class Booking
     public function getPrice()
     {
         return $this->price;
+    }
+
+    public function addVisitor(Visitor $visitor)
+    {
+        $this->visitors[] = $visitor; // $this->visistors->add($visitor)
+        $visitor->setBooking($this);
+    }
+
+    public function getVisitors()
+    {
+        return $this->visitors;
     }
 }
 
