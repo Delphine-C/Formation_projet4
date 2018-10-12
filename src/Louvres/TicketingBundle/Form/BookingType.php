@@ -49,8 +49,8 @@ class BookingType extends AbstractType
             ->add('quantity',IntegerType::class,[
                 'attr'=> ['min'=> 1,'max'=> 10],
                 'label' => 'Nombre de visiteur',
-                ])
-            ->add('save',SubmitType::class,['label' => 'Valider']);
+                ]);
+
     }/**
      * {@inheritdoc}
      */

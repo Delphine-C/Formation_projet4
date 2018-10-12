@@ -32,7 +32,6 @@ class VisitorController extends Controller
                 'entry_type' => VisitorType::class,
                 'entry_options' => ['label'=> false],
                 ])
-            ->add('save',SubmitType::class,['label'=>'Passer commande'])
             ->handleRequest($request);
 
         if ($formVisitors->isSubmitted() && $formVisitors->isValid()) {

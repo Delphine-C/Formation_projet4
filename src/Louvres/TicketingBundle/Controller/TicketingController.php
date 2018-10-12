@@ -19,7 +19,9 @@ class TicketingController extends Controller
     public function indexAction(Request $request)
     {
         $booking = new Booking();
-        $formBooking = $this->createForm(BookingType::class,$booking)->handleRequest($request);
+        $formBooking = $this
+            ->createForm(BookingType::class,$booking)
+            ->handleRequest($request);
 
         if ($formBooking->isSubmitted() && $formBooking->isValid()) {
             $request->getSession()->set('resa',$booking);
