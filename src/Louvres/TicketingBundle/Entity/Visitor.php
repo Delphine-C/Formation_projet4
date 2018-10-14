@@ -73,6 +73,13 @@ class Visitor
     private $birthdate;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="price", type="integer")
+     */
+    private $price;
+
+    /**
      * @var bool
      *
      * @ORM\Column(name="reduction", type="boolean")
@@ -82,6 +89,7 @@ class Visitor
     public function __construct()
     {
         $this->country="FR";
+        $this->price=0;
     }
 
     /**
@@ -222,6 +230,27 @@ class Visitor
     public function getBooking()
     {
         return $this->booking;
+    }
+
+    /**
+     * Set price
+     *
+     * @param integer $price
+     *
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * Get price
+     *
+     * @return int
+     */
+    public function getPrice()
+    {
+        return $this->price;
     }
 }
 

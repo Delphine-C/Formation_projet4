@@ -25,12 +25,15 @@ class PriceCalculator
         for ($i=0;$i < $nbVisitor;$i++)
         {
             $visitor = $request->getSession()->get('visitors')[$i];
+
             $reduction = $visitor->getReduction();
             $birthdate = $visitor->getBirthdate();
 
             $age = $ageC->calculAge($request,$birthdate);
 
             $prixVisitor = $priceByVC->calculPrixByVisitor($request,$age,$reduction);
+            $visitor->setPrice($prixVisitor);
+
             $prix=$prix+$prixVisitor;
         }
         return $prix;
