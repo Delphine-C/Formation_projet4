@@ -16,6 +16,12 @@ class OrderController extends Controller
 {
     public function indexAction(Request $request)
     {
+        if ($request->getSession()->get('resa')->getType() === "1") {
+            $type ="Journée";
+        } else {
+            $type = "Demi-journée";
+        }
+
         if ($request->isMethod('POST')) {
             $apiSecret = $this->container->getParameter('API_secret');
             \Stripe\Stripe::setApiKey($apiSecret);
@@ -39,6 +45,23 @@ class OrderController extends Controller
             $this->getDoctrine()->getManager()->persist($booking);
             $this->getDoctrine()->getManager()->flush();
 
+            $message = (new \Swift_Message('Hello Email'))
+                ->setFrom('send@example.com')
+                ->setTo($booking->getEmail())
+                ->setBody(
+                    $this->renderView(
+                        '@LouvresTicketing/Mail/booking.html.twig',[
+                            'nb' => $request->getSession()->get('resa')->getQuantity(),
+                            'type' => $type,
+                            'date' => $request->getSession()->get('resa')->getDatevisit()->format("d F Y"),
+                            'prix'=>$request->getSession()->get('prix'),
+                            'visitors' => $request->getSession()->get('visitors'),
+                        ]
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+
             $this->addFlash('notice',"Votre commande a été passée avec succès. Vos billets vous ont été envoyés par mail.");
             return $this->redirectToRoute('louvres_ticketing_booking');
         }
@@ -47,12 +70,6 @@ class OrderController extends Controller
 
         $prix = $priceC->calculPrix($request);
         $request->getSession()->set('prix',$prix);
-
-        if ($request->getSession()->get('resa')->getType() === "1") {
-            $type ="Journée";
-        } else {
-            $type = "Demi-journée";
-        }
 
         return $this->render('@LouvresTicketing/Ticketing/order.html.twig',[
             'apiPublic'=>$this->container->getParameter('API_public'),
