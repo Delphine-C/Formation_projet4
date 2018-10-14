@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vos billets</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/mail.css') }}" />
+</head>
+<body>
+    <header>
+            <img src="{{ asset('images/louvre-pyramid64.png') }}">
+            <h1 id="logo">Musée du Louvre</h1>
+    </header>
+
+    <section>
+        <h2>Bonjour !</h2>
+        <p>Vous venez de passer commande sur notre site et nous vous en remercions. Veuillez trouvez ci dessous les billets que vous avez commandez.</p>
+        <h3>Récapitulatif de votre commande</h3>
+        <p>Vous avez commandez {{ nb }} billet(s) {{ type }} pour le {{ date | localizeddate('full','none') }}.</p>
+        <h3>Détail de votre commande</h3>
+        {% for visitor in visitors %}
+            <p>
+                {{ visitor.name|upper }} {{ visitor.firstname }} né le {{ visitor.birthdate | localizeddate('short','none') }}, {{ visitor.country }}<br>
+                Tarif réduit :
+                {% if visitor.reduction == 1%}
+                    Oui
+                {% else %}
+                    Non
+                {% endif %}<br>
+                Prix : {{ visitor.price }} €
+            </p>
+        {% endfor %}
+    </section>
+
+    <hr>
+    <footer>
+        <p>Pour obtenir vos billets, imprimez cet e-mail et présentez-le à l'entrée du musée.</p>
+        <p>Le musée du Louvre vous souhaite une agréable visite.</p>
+    </footer>
+</body>
+</html>

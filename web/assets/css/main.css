@@ -1954,7 +1954,7 @@ button.alt:active,
 	box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
 }
 
-#header h1 {
+#header h1, header h1 {
 	font-family: 'Arvo';
 	font-weight: 700;
 	color: #ed786a;
