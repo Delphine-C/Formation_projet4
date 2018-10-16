@@ -3,12 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Vos billets</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/mail.css') }}" />
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Arvo:700");
+        /* Header */
+        header {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: auto;
+            margin-left: 25px;
+            font-size: 2em!important;
+        }
+        header h1 {
+            font-family: 'Arvo', serif;
+            font-weight: 700;
+            color: #ed786a;
+            text-shadow: 0.05em 0em rgb(255, 255, 255);
+            font-size: 3em;
+            letter-spacing: 13px;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        /* Content */
+        h2, h3 {
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            margin: 0 0 1em 0;
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #888;
+        }
+        h2 {
+            font-size: 1.65em;
+            font-weight: 400;
+            letter-spacing: 4px;
+            margin: 0 0 1.5em 0;
+            line-height: 1.75em;
+        }
+        /* Footer */
+        footer p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-            <img src="{{ asset('images/louvre-pyramid64.png') }}">
+            <img src="https://cdn.pixabay.com/photo/2012/11/28/10/18/sculpture-67619_1280.jpg">
             <h1 id="logo">Musée du Louvre</h1>
     </header>
 

@@ -45,8 +45,8 @@ class OrderController extends Controller
             $this->getDoctrine()->getManager()->persist($booking);
             $this->getDoctrine()->getManager()->flush();
 
-            $message = (new \Swift_Message('Hello Email'))
-                ->setFrom('send@example.com')
+            $message = (new \Swift_Message('Vos billets pour le Musée du Louvre'))
+                ->setFrom(['billetterie-louvre@mail.com' => 'Billetterie Louvre'])
                 ->setTo($booking->getEmail())
                 ->setBody(
                     $this->renderView(
