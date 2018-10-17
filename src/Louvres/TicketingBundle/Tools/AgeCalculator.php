@@ -8,11 +8,9 @@
 
 namespace Louvres\TicketingBundle\Tools;
 
-use Symfony\Component\HttpFoundation\Request;
-
 class AgeCalculator
 {
-    public function calculAge(Request $request,$birthdate)
+    public function calculAge($birthdate)
     {
         $today = new \Datetime();
         $age = $today->diff($birthdate,true)->y;

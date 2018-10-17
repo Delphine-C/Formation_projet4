@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eabc95ce-a7b4-41a5-ae91-6e7e963c24f9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Louvres/TicketingBundle/Controller/HomeControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Louvres/TicketingBundle/Tools/AgeCalculatorTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/AgeCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/AgeCalculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceCalculator.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,20 +23,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/HomeController.php">
+      <file leaf-file-name="AgeCalculator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/AgeCalculator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="57" />
+            <state relative-caret-position="76">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeControllerTest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Louvres/TicketingBundle/Controller/HomeControllerTest.php">
+      <file leaf-file-name="AgeCalculatorTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Louvres/TicketingBundle/Tools/AgeCalculatorTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+            <state relative-caret-position="285">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#148#200#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitorController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="36" column="88" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
             </state>
           </provider>
         </entry>
@@ -88,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/DefaultController.php" />
@@ -110,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/credits.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/Age.php" />
-        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/AgeCalculator.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceByVisitor.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/VisitorsType.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/VisitorType.php" />
@@ -126,19 +138,21 @@
         <option value="$PROJECT_DIR$/web/assets/css/mail.css" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Mail/booking.html" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Visitor.php" />
-        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceCalculator.php" />
-        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php" />
         <option value="$PROJECT_DIR$/app/config/config_test.yml" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/app_dev.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/OrderController.php" />
         <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/OrderController.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Mail/booking.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Prices/prices.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/tests/Louvres/TicketingBundle/Controller/HomeControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceCalculator.php" />
+        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/AgeCalculator.php" />
+        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php" />
+        <option value="$PROJECT_DIR$/tests/Louvres/TicketingBundle/Tools/AgeCalculatorTest.php" />
       </list>
     </option>
   </component>
@@ -226,9 +240,8 @@
       <path value="$PROJECT_DIR$/vendor/bin/.phpunit" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-8" />
-    <option name="y" value="381" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-348" />
     <option name="width" value="1941" />
     <option name="height" value="650" />
   </component>
@@ -248,6 +261,11 @@
             <path>
               <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -277,16 +295,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Louvres" type="462c0819:PsiDirectoryNode" />
               <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Louvres" type="462c0819:PsiDirectoryNode" />
-              <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Tools" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
@@ -317,7 +326,10 @@
             <path>
               <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Louvres" type="462c0819:PsiDirectoryNode" />
+              <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -379,17 +391,18 @@
       <workItem from="1539505622228" duration="19051000" />
       <workItem from="1539608823349" duration="9352000" />
       <workItem from="1539678110529" duration="12375000" />
-      <workItem from="1539764249740" duration="2856000" />
+      <workItem from="1539764249740" duration="9832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221810000" />
+    <option name="totallyTimeSpent" value="228786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="254" width="1294" height="433" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.2046875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.2045277" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.1305842" />
@@ -445,13 +458,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/credits.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Home/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -479,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/AgeCalculator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/BookingType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -507,47 +506,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="33" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/PaymentController.php" />
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Mail/booking.html" />
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceByVisitor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Visitor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2658">
           <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceCalculator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -592,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -631,13 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="1957" column="22" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
@@ -675,24 +625,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -703,10 +639,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="111" lean-forward="true" selection-start-line="26" selection-start-column="111" selection-end-line="26" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceByVisitor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-55">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Louvres/TicketingBundle/Controller/HomeControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+        <state relative-caret-position="133">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#147#204#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/PriceCalculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="e#142#187#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/VisitorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="36" column="88" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Tools/AgeCalculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Louvres/TicketingBundle/Tools/AgeCalculatorTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#148#200#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

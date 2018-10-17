@@ -29,7 +29,7 @@ class PriceCalculator
             $reduction = $visitor->getReduction();
             $birthdate = $visitor->getBirthdate();
 
-            $age = $ageC->calculAge($request,$birthdate);
+            $age = $ageC->calculAge($birthdate);
 
             $prixVisitor = $priceByVC->calculPrixByVisitor($request,$age,$reduction);
             $visitor->setPrice($prixVisitor);
