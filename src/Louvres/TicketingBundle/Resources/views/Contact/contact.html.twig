@@ -1,0 +1,27 @@
+{% extends "@LouvresTicketing/layout.html.twig" %}
+
+{% block title %}
+    Louvre - Contact
+{% endblock %}
+
+{% block body %}
+    <section id="features">
+        <div class="container">
+            <article class="box post">
+                <header>
+                    <h2>Nous contacter</h2>
+                </header>
+
+                <div class="well">
+                    {{ form_start(form) }}
+
+                    {{ form_widget(form) }}
+
+                    <button type="submit">Envoyer</button>
+
+                    {{ form_end(form) }}
+                </div>
+            </article>
+        </div>
+    </section>
+{% endblock %}

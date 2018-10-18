@@ -22,3 +22,6 @@ louvres_ticketing_credits:
     path:     /credits
     defaults: { _controller: LouvresTicketingBundle:Credits:index }
 
+louvres_ticketing_contact:
+    path:     /contact
+    defaults: { _controller: LouvresTicketingBundle:Contact:send }
