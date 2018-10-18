@@ -18,6 +18,7 @@ class PriceCalculator
     {
         $prix=0;
         $nbVisitor = $request->getSession()->get('resa')->getQuantity();
+        $jour = $request->getSession()->get('resa')->getType();
 
         $ageC = new AgeCalculator();
         $priceByVC = new PriceByVisitor();
@@ -31,7 +32,7 @@ class PriceCalculator
 
             $age = $ageC->calculAge($birthdate);
 
-            $prixVisitor = $priceByVC->calculPrixByVisitor($request,$age,$reduction);
+            $prixVisitor = $priceByVC->calculPrixByVisitor($jour,$age,$reduction);
             $visitor->setPrice($prixVisitor);
 
             $prix=$prix+$prixVisitor;

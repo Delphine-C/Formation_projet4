@@ -8,8 +8,6 @@
 
 namespace Louvres\TicketingBundle\Tools;
 
-use Symfony\Component\HttpFoundation\Request;
-
 class PriceByVisitor
 {
     const NORMAL = 16;
@@ -19,10 +17,8 @@ class PriceByVisitor
     const REDUCE = 10;
     const HALF_DAY = 8;
 
-    public function calculPrixByVisitor(Request $request,$age,$reduction)
+    public function calculPrixByVisitor($jour,$age,$reduction)
     {
-        $jour =$request->getSession()->get('resa')->getType();
-
         if(!$jour) {
             if ($age < 4) {
                 $prix = self::BABY;
