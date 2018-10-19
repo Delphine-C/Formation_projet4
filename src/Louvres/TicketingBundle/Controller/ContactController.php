@@ -22,7 +22,25 @@ class ContactController extends Controller
             ->createForm(ContactType::class,$contact)
             ->handleRequest($request);
 
-        if ($formContact->isSubmitted() && $formContact->isValid()) {}
+        if ($formContact->isSubmitted() && $formContact->isValid()) {
+            $monMail = $this->container->getParameter('mail_address');
+
+            $message = (new \Swift_Message("Un message via le Musée du Louvre"))
+                ->setFrom(['billetterie-louvre@mail.com' => 'Billetterie Louvre'])
+                ->setTo($monMail)
+                ->setBody(
+                    $this->renderView(
+                        '@LouvresTicketing/Mail/contact.html.twig',[
+                            'contact' => $contact
+                        ]
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+
+            $this->addFlash('notice',"Votre mail a bien été envoyé.");
+            return $this->redirectToRoute('louvres_ticketing_contact');
+        }
 
         return $this->render('@LouvresTicketing/Contact/contact.html.twig',[
             'form'=>$formContact->createView()

@@ -25,16 +25,27 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('name',TextType::class,[
-                'label' => 'Votre nom'
+                'label' => 'Votre nom',
+                'attr' => [
+                    'minLength' => 2,
+                    'maxLength' => 40
+                ]
             ])
             ->add('email',EmailType::class,[
                 'label' => 'Votre adresse mail'
             ])
             ->add('title',TextType::class,[
-                'label' => 'Objet du message'
+                'label' => 'Objet du message',
+                'attr' => [
+                    'minLength' => 2,
+                    'maxLength' => 100
+                ]
             ])
             ->add('content',TextareaType::class,[
-                'label' => 'Votre message'
+                'label' => 'Votre message',
+                'attr' => [
+                    'maxLength' => 400
+                ]
             ]);
     }/**
  * {@inheritdoc}

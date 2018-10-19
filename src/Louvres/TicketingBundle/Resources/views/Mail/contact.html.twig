@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vos billets</title>
+    <style>
+        /* Content */
+        h2, h3 {
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            margin: 0 0 1em 0;
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #888;
+        }
+        h2 {
+            font-size: 1.65em;
+            font-weight: 400;
+            letter-spacing: 4px;
+            margin: 0 0 1.5em 0;
+            line-height: 1.75em;
+        }
+        /* Footer */
+        footer p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h2>Bonjour !</h2>
+    <p>Vous avez un nouveau message envoyé depuis votre site "Musée du Louvre"</p>
+    <p>Le message a été envoyé de la part de {{ contact.name }}, le voici :</p>
+    <h3>"{{ contact.title }}</h3>
+    <p>{{ contact.content }}"</p>
+    <br>
+</section>
+<hr>
+<footer>
+    <p>Vous pouvez recontacter cette personne à {{ contact.email }}</p>
+</footer>
+</body>
+</html>
