@@ -95,7 +95,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 body, input, textarea, select {
     font-family: 'Source Sans Pro';
     font-weight: 300;
-    color: #777;
+    color: #5E5E5E;
     line-height: 1.65em;
     font-size: 15pt;
 }
@@ -1683,7 +1683,11 @@ form textarea {
 }
 
 form input[type="number"] {
-    margin-left: 3px;
+    margin-left: 25px;
+}
+
+#louvres_ticketingbundle_booking_type_1 {
+    margin-left: 50px;
 }
 
 select[name$='[country]'] {
