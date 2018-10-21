@@ -19,6 +19,6 @@ class AgeCalculatorTest extends WebTestCase
         $birthdate = new \DateTime('1956-10-10');
         $result = $ageCalc->calculAge($birthdate);
 
-        $this->assertSame(62 ,$result);
+        $this->assertSame(62, $result);
     }
 }

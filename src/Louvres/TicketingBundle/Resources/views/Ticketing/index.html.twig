@@ -40,12 +40,12 @@
 
 {% block scriptJS %}
     <script>
-        $(function() {
+        $(function () {
             $.datepicker.setDefaults({
                 prevText: 'Précédent',
                 nextText: 'Suivant',
-                monthNamesShort: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
-                dayNamesMin: ['D','L','M','M','J','V','S'],
+                monthNamesShort: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+                dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
                 dateFormat: 'dd/mm/yy',
                 firstDay: 1,
             });
@@ -56,14 +56,14 @@
                 var currDate = date.getDate();
 
                 if (day == 2) {
-                    return [false] ;
-                } else if (currDate == 1 && (month == 10 || month == 4)){
                     return [false];
-                } else if (currDate == 25 && month == 11){
+                } else if (currDate == 1 && (month == 10 || month == 4)) {
+                    return [false];
+                } else if (currDate == 25 && month == 11) {
                     return [false];
                 }
                 else {
-                    return [true] ;
+                    return [true];
                 }
             }
 
@@ -73,7 +73,7 @@
                 $('#louvres_ticketingbundle_booking_type_1').attr('checked', true);
             }
 
-            if(new Date().getHours() >= 14) {
+            if (new Date().getHours() >= 14) {
                 showHide();
             }
 
@@ -82,10 +82,14 @@
                 changeMonth: true,
                 changeYear: true,
                 beforeShowDay: disableDates,
-                onSelect: function(dateText, inst){
-                    var today = new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'numeric', day: 'numeric' });
+                onSelect: function (dateText, inst) {
+                    var today = new Date().toLocaleDateString('fr-FR', {
+                        year: 'numeric',
+                        month: 'numeric',
+                        day: 'numeric'
+                    });
 
-                    if(dateText === today && new Date().getHours() >= 14) {
+                    if (dateText === today && new Date().getHours() >= 14) {
                         showHide();
                     } else {
                         $('#louvres_ticketingbundle_booking_type_0').show().attr('checked', true);

@@ -20,11 +20,11 @@ class TicketingController extends Controller
     {
         $booking = new Booking();
         $formBooking = $this
-            ->createForm(BookingType::class,$booking)
+            ->createForm(BookingType::class, $booking)
             ->handleRequest($request);
 
         if ($formBooking->isSubmitted() && $formBooking->isValid()) {
-            $request->getSession()->set('resa',$booking);
+            $request->getSession()->set('resa', $booking);
 
             $selectedDate = $this
                 ->getDoctrine()
@@ -33,13 +33,12 @@ class TicketingController extends Controller
                 ->findByDateVisit($booking->getDateVisit());
 
             $nbVisitor = 0;
-            foreach ($selectedDate as $date)
-            {
+            foreach ($selectedDate as $date) {
                 $nbVisitor += $date->getQuantity();
             }
 
             if ($nbVisitor > 1000) {
-                $this->addFlash('error',"Il n'y a plus de billets disponibles pour le jour sélectionné. Veuillez choisir une autre date.");
+                $this->addFlash('error', "Il n'y a plus de billets disponibles pour le jour sélectionné. Veuillez choisir une autre date.");
 
                 return $this->redirectToRoute('louvres_ticketing_booking');
             }
@@ -47,8 +46,8 @@ class TicketingController extends Controller
             return $this->redirectToRoute('louvres_ticketing_visitor');
         }
 
-        return $this->render('@LouvresTicketing/Ticketing/index.html.twig',[
-            'form'=>$formBooking->createView()
+        return $this->render('@LouvresTicketing/Ticketing/index.html.twig', [
+            'form' => $formBooking->createView()
         ]);
     }
 }

@@ -5,40 +5,41 @@
 {% endblock %}
 
 {% block body %}
-<section id="features">
-    <div class="container">
-        <article class="box post">
-            <div>
-                {% for message in app.flashes('error') %}
-                    <div class="flash-error">
-                        {{ message }}
-                    </div>
-                {% endfor %}
+    <section id="features">
+        <div class="container">
+            <article class="box post">
+                <div>
+                    {% for message in app.flashes('error') %}
+                        <div class="flash-error">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
 
-                <h2>Récapitulatif de votre commande</h2>
-                <p class="p-content">
-                    Vous avez réservé {{ nb }} billet(s) {{ type }} pour le {{ date | localizeddate('full','none') }}.<br>
-                    La montant de votre commande s'élève à {{ prix }} euros.
-                </p>
-            </div>
-            <form action="{{ path("louvres_ticketing_order") }}" method="post" id="payment-form">
-                <div class="form-row">
-                    <label for="card-element">
-                        Carte bancaire
-                    </label>
-                    <div id="card-element">
-                        <!-- A Stripe Element will be inserted here. -->
-                    </div>
-
-                    <!-- Used to display form errors. -->
-                    <div id="card-errors" role="alert"></div>
+                    <h2>Récapitulatif de votre commande</h2>
+                    <p class="p-content">
+                        Vous avez réservé {{ nb }} billet(s) {{ type }} pour
+                        le {{ date | localizeddate('full','none') }}.<br>
+                        La montant de votre commande s'élève à {{ prix }} euros.
+                    </p>
                 </div>
+                <form action="{{ path("louvres_ticketing_order") }}" method="post" id="payment-form">
+                    <div class="form-row">
+                        <label for="card-element">
+                            Carte bancaire
+                        </label>
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+                        </div>
 
-                <button>Confirmer le paiement</button>
-            </form>
-        </article>
-    </div>
-</section>
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert"></div>
+                    </div>
+
+                    <button>Confirmer le paiement</button>
+                </form>
+            </article>
+        </div>
+    </section>
 {% endblock %}
 
 {% block scriptJS %}
@@ -62,7 +63,7 @@
         // Add an instance of the card Element into the `card-element` <div>.
         card.mount('#card-element');
 
-        card.addEventListener('change', function(event) {
+        card.addEventListener('change', function (event) {
             var displayError = document.getElementById('card-errors');
             if (event.error) {
                 displayError.textContent = event.error.message;
@@ -73,10 +74,10 @@
 
         // Create a token or display an error when the form is submitted.
         var form = document.getElementById('payment-form');
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            stripe.createToken(card).then(function(result) {
+            stripe.createToken(card).then(function (result) {
                 if (result.error) {
                     // Inform the customer that there was an error.
                     var errorElement = document.getElementById('card-errors');

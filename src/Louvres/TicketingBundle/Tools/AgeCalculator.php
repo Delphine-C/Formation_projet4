@@ -13,7 +13,7 @@ class AgeCalculator
     public function calculAge($birthdate)
     {
         $today = new \Datetime();
-        $age = $today->diff($birthdate,true)->y;
+        $age = $today->diff($birthdate, true)->y;
 
         return $age;
     }

@@ -19,7 +19,7 @@ class ContactController extends Controller
     {
         $contact = new ContactDTO();
         $formContact = $this
-            ->createForm(ContactType::class,$contact)
+            ->createForm(ContactType::class, $contact)
             ->handleRequest($request);
 
         if ($formContact->isSubmitted() && $formContact->isValid()) {
@@ -30,7 +30,7 @@ class ContactController extends Controller
                 ->setTo($monMail)
                 ->setBody(
                     $this->renderView(
-                        '@LouvresTicketing/Mail/contact.html.twig',[
+                        '@LouvresTicketing/Mail/contact.html.twig', [
                             'contact' => $contact
                         ]
                     ),
@@ -38,12 +38,12 @@ class ContactController extends Controller
                 );
             $this->get('mailer')->send($message);
 
-            $this->addFlash('notice',"Votre mail a bien été envoyé.");
+            $this->addFlash('notice', "Votre mail a bien été envoyé.");
             return $this->redirectToRoute('louvres_ticketing_contact');
         }
 
-        return $this->render('@LouvresTicketing/Contact/contact.html.twig',[
-            'form'=>$formContact->createView()
+        return $this->render('@LouvresTicketing/Contact/contact.html.twig', [
+            'form' => $formContact->createView()
         ]);
     }
 }

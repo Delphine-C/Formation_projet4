@@ -22,29 +22,28 @@ class VisitorController extends Controller
     {
         $nbVisitor = $request->getSession()->get('resa')->getQuantity();
 
-        for ($i=0;$i < $nbVisitor;$i++)
-        {
+        for ($i = 0; $i < $nbVisitor; $i++) {
             $visitor[] = new Visitor();
         }
 
         $formVisitors = $this
-            ->createForm(CollectionType::class,$visitor,[
+            ->createForm(CollectionType::class, $visitor, [
                 'entry_type' => VisitorType::class,
-                'entry_options' => ['label'=> false],
-                ])
+                'entry_options' => ['label' => false],
+            ])
             ->handleRequest($request);
 
         if ($formVisitors->isSubmitted() && $formVisitors->isValid()) {
-            $request->getSession()->set('visitors',$visitor);
+            $request->getSession()->set('visitors', $visitor);
 
-            for ($i=0;$i < $nbVisitor;$i++) {
+            for ($i = 0; $i < $nbVisitor; $i++) {
                 $visitor = $request->getSession()->get('visitors')[$i];
                 $request->getSession()->get('resa')->addVisitor($visitor);
-                }
+            }
 
             return $this->redirectToRoute('louvres_ticketing_order');
         }
 
-        return $this->render('@LouvresTicketing/Ticketing/visitor.html.twig',['form'=>$formVisitors ->createView()]);
+        return $this->render('@LouvresTicketing/Ticketing/visitor.html.twig', ['form' => $formVisitors->createView()]);
     }
 }

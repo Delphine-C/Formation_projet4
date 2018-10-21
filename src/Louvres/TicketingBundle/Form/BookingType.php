@@ -25,33 +25,35 @@ class BookingType extends AbstractType
         ];
 
         $builder
-            ->add('name',TextType::class,[
+            ->add('name', TextType::class, [
                 'label' => 'Renseigner votre nom',
                 'attr' => [
                     'minLength' => 2,
                     'maxLength' => 40
                 ]
             ])
-            ->add('email',EmailType::class,['label' => 'Renseigner votre adresse mail'])
-            ->add('dateVisit',DateType::class,[
+            ->add('email', EmailType::class, ['label' => 'Renseigner votre adresse mail'])
+            ->add('dateVisit', DateType::class, [
                 'label' => 'Choisissez une date',
                 'widget' => 'single_text',
                 'html5' => false,
                 'format' => 'dd/MM/yyyy',
                 'attr' => ['class' => 'datepicker']
-                ])
-            ->add('type',ChoiceType::class, [
+            ])
+            ->add('type', ChoiceType::class, [
                 'choices' => $radioChoices,
                 'expanded' => true,
                 'multiple' => false,
                 'label' => 'Choisissez un type de billet',
-                ])
-            ->add('quantity',IntegerType::class,[
-                'attr'=> ['min'=> 1,'max'=> 10],
+            ])
+            ->add('quantity', IntegerType::class, [
+                'attr' => ['min' => 1, 'max' => 10],
                 'label' => 'Nombre de visiteur',
-                ]);
+            ]);
 
-    }/**
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

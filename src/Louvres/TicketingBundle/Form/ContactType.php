@@ -24,32 +24,34 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name',TextType::class,[
+            ->add('name', TextType::class, [
                 'label' => 'Votre nom',
                 'attr' => [
                     'minLength' => 2,
                     'maxLength' => 40
                 ]
             ])
-            ->add('email',EmailType::class,[
+            ->add('email', EmailType::class, [
                 'label' => 'Votre adresse mail'
             ])
-            ->add('title',TextType::class,[
+            ->add('title', TextType::class, [
                 'label' => 'Objet du message',
                 'attr' => [
                     'minLength' => 2,
                     'maxLength' => 100
                 ]
             ])
-            ->add('content',TextareaType::class,[
+            ->add('content', TextareaType::class, [
                 'label' => 'Votre message',
                 'attr' => [
                     'maxLength' => 400
                 ]
             ]);
-    }/**
- * {@inheritdoc}
- */
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([

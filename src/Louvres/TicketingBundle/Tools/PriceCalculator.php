@@ -16,15 +16,14 @@ class PriceCalculator
 {
     public function calculPrix(Request $request)
     {
-        $prix=0;
+        $prix = 0;
         $nbVisitor = $request->getSession()->get('resa')->getQuantity();
         $jour = $request->getSession()->get('resa')->getType();
 
         $ageC = new AgeCalculator();
         $priceByVC = new PriceByVisitor();
 
-        for ($i=0;$i < $nbVisitor;$i++)
-        {
+        for ($i = 0; $i < $nbVisitor; $i++) {
             $visitor = $request->getSession()->get('visitors')[$i];
 
             $reduction = $visitor->getReduction();
@@ -32,10 +31,10 @@ class PriceCalculator
 
             $age = $ageC->calculAge($birthdate);
 
-            $prixVisitor = $priceByVC->calculPrixByVisitor($jour,$age,$reduction);
+            $prixVisitor = $priceByVC->calculPrixByVisitor($jour, $age, $reduction);
             $visitor->setPrice($prixVisitor);
 
-            $prix=$prix+$prixVisitor;
+            $prix = $prix + $prixVisitor;
         }
         return $prix;
     }

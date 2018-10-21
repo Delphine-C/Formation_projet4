@@ -10,11 +10,13 @@
             display: flex;
             margin-bottom: 20px;
         }
+
         h1 {
             margin: auto;
             margin-left: 25px;
-            font-size: 2em!important;
+            font-size: 2em !important;
         }
+
         header h1 {
             font-family: 'Arvo', serif;
             font-weight: 700;
@@ -23,21 +25,25 @@
             font-size: 3em;
             letter-spacing: 13px;
         }
+
         img {
             width: 100px;
             height: 100px;
         }
+
         /* Content */
         h2, h3 {
             font-size: 1.2em;
             letter-spacing: 2px;
             margin: 0 0 1em 0;
         }
+
         h1, h2, h3 {
             font-weight: 600;
             text-transform: uppercase;
             color: #888;
         }
+
         h2 {
             font-size: 1.65em;
             font-weight: 400;
@@ -45,6 +51,7 @@
             margin: 0 0 1.5em 0;
             line-height: 1.75em;
         }
+
         /* Footer */
         footer p {
             text-align: center;
@@ -53,35 +60,37 @@
     </style>
 </head>
 <body>
-    <header>
-            <img src="https://cdn.pixabay.com/photo/2012/11/28/10/18/sculpture-67619_1280.jpg">
-            <h1 id="logo">Musée du Louvre</h1>
-    </header>
+<header>
+    <img src="https://cdn.pixabay.com/photo/2012/11/28/10/18/sculpture-67619_1280.jpg">
+    <h1 id="logo">Musée du Louvre</h1>
+</header>
 
-    <section>
-        <h2>Bonjour !</h2>
-        <p>Vous venez de passer commande sur notre site et nous vous en remercions. Veuillez trouvez ci dessous les billets que vous avez commandez.</p>
-        <h3>Récapitulatif de votre commande</h3>
-        <p>Vous avez commandez {{ nb }} billet(s) {{ type }} pour le {{ date | localizeddate('full','none') }}.</p>
-        <h3>Détail de votre commande</h3>
-        {% for visitor in visitors %}
-            <p>
-                {{ visitor.name|upper }} {{ visitor.firstname }} né le {{ visitor.birthdate | localizeddate('short','none') }}, {{ visitor.country }}<br>
-                Tarif réduit :
-                {% if visitor.reduction == 1%}
-                    Oui
-                {% else %}
-                    Non
-                {% endif %}<br>
-                Prix : {{ visitor.price }} €
-            </p>
-        {% endfor %}
-    </section>
+<section>
+    <h2>Bonjour !</h2>
+    <p>Vous venez de passer commande sur notre site et nous vous en remercions. Veuillez trouvez ci dessous les billets
+        que vous avez commandez.</p>
+    <h3>Récapitulatif de votre commande</h3>
+    <p>Vous avez commandez {{ nb }} billet(s) {{ type }} pour le {{ date | localizeddate('full','none') }}.</p>
+    <h3>Détail de votre commande</h3>
+    {% for visitor in visitors %}
+        <p>
+            {{ visitor.name|upper }} {{ visitor.firstname }} né
+            le {{ visitor.birthdate | localizeddate('short','none') }}, {{ visitor.country }}<br>
+            Tarif réduit :
+            {% if visitor.reduction == 1 %}
+            Oui
+        {% else %}
+            Non
+            {% endif %}<br>
+            Prix : {{ visitor.price }} €
+        </p>
+    {% endfor %}
+</section>
 
-    <hr>
-    <footer>
-        <p>Pour obtenir vos billets, imprimez cet e-mail et présentez-le à l'entrée du musée.</p>
-        <p>Le musée du Louvre vous souhaite une agréable visite.</p>
-    </footer>
+<hr>
+<footer>
+    <p>Pour obtenir vos billets, imprimez cet e-mail et présentez-le à l'entrée du musée.</p>
+    <p>Le musée du Louvre vous souhaite une agréable visite.</p>
+</footer>
 </body>
 </html>

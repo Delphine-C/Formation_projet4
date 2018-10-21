@@ -17,9 +17,9 @@ class PriceByVisitor
     const REDUCE = 10;
     const HALF_DAY = 8;
 
-    public function calculPrixByVisitor($jour,$age,$reduction)
+    public function calculPrixByVisitor($jour, $age, $reduction)
     {
-        if(!$jour) {
+        if (!$jour) {
             if ($age < 4) {
                 $prix = self::BABY;
             } else {
@@ -30,8 +30,8 @@ class PriceByVisitor
                 $prix = self::BABY;
             } elseif ($age < 12) {
                 $prix = self::CHILD;
-            } else{
-                if($reduction) {
+            } else {
+                if ($reduction) {
                     $prix = self::REDUCE;
                 } else {
                     if ($age > 60) {

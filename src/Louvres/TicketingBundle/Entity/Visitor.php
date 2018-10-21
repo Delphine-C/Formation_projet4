@@ -88,8 +88,8 @@ class Visitor
 
     public function __construct()
     {
-        $this->country="FR";
-        $this->price=0;
+        $this->country = "FR";
+        $this->price = 0;
     }
 
     /**

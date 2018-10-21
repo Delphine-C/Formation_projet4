@@ -16,8 +16,8 @@ class PriceByVisitorTest extends WebTestCase
     public function testCalculPriceByVisitor()
     {
         $priceByV = new PriceByVisitor();
-        $result = $priceByV->calculPrixByVisitor(1,62,0);
+        $result = $priceByV->calculPrixByVisitor(1, 62, 0);
 
-        $this->assertSame(12,$result);
+        $this->assertSame(12, $result);
     }
 }

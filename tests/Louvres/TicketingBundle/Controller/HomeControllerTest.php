@@ -15,8 +15,8 @@ class HomeControllerTest extends WebTestCase
     public function testHomepageIsUp()
     {
         $client = static::createClient();
-        $client->request('GET','/');
+        $client->request('GET', '/');
 
-        $this->assertSame(200,$client->getResponse()->getStatusCode());
+        $this->assertSame(200, $client->getResponse()->getStatusCode());
     }
 }
