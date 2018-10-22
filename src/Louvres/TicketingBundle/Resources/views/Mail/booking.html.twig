@@ -67,9 +67,10 @@
 
 <section>
     <h2>Bonjour !</h2>
-    <p>Vous venez de passer commande sur notre site et nous vous en remercions. Veuillez trouvez ci dessous les billets
+    <p>Vous avons bien pris en compte votre commande {{ commandeID }} sur notre site et nous vous en remercions. Veuillez trouvez ci dessous les billets
         que vous avez commandez.</p>
     <h3>Récapitulatif de votre commande</h3>
+
     <p>Vous avez commandez {{ nb }} billet(s) {{ type }} pour le {{ date | localizeddate('full','none') }}.</p>
     <h3>Détail de votre commande</h3>
     {% for visitor in visitors %}

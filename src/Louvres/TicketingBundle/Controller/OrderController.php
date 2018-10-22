@@ -29,12 +29,14 @@ class OrderController extends Controller
             $prix = $request->getSession()->get('prix') * 100;
 
             try {
-                \Stripe\Charge::create(array(
+                $charge = \Stripe\Charge::create(array(
                     "amount" => $prix,
                     "currency" => "eur",
                     "source" => $request->request->get('stripeToken'),
                     "description" => sprintf("Paiement de %s", $request->getSession()->get('resa')->getName()),
                 ));
+
+                $chargeID = $charge->id;
             } catch (\Stripe\Error\Card $e) {
                 $this->addFlash('error', "Le paiement de votre commande a rencontré un problème. Veuillez recommencer l'opération.");
                 return $this->redirectToRoute('louvres_ticketing_order');
@@ -55,6 +57,7 @@ class OrderController extends Controller
                             'type' => $type,
                             'date' => $request->getSession()->get('resa')->getDatevisit()->format("d F Y"),
                             'prix' => $request->getSession()->get('prix'),
+                            'commandeID' => $chargeID,
                             'visitors' => $request->getSession()->get('visitors'),
                         ]
                     ),
