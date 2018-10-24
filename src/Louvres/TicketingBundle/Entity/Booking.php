@@ -50,6 +50,17 @@ class Booking
      * @var \DateTime
      *
      * @ORM\Column(name="date_visit", type="date")
+     * @Assert\Date()
+     * @Assert\Range(
+     *     min = "today",
+     *     max = "+1 year",
+     *     minMessage = "La date de visite ne peut être antérieure à aujourd'hui.",
+     *     maxMessage = "Aucun billet ne peut être pris pour une date de visite supérieure à 1 an."
+     * )
+     * @Assert\NotEqualTo("tuesday", message="Le musée est fermé le mardi.")
+     * @Assert\NotEqualTo("first day of may", message="Le musée est fermé le 1er mai.")
+     * @Assert\NotEqualTo("first day of november", message="Le musée est fermé le 1er novembre.")
+     * @Assert\NotEqualTo("December 25th", message="Le musée est fermé le 25 décembre.")
      */
     private $dateVisit;
 
