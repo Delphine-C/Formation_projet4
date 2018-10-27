@@ -4,11 +4,20 @@
     Louvre - Contact
 {% endblock %}
 
+{% block scriptHead %}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}
+
 {% block body %}
     <section id="features">
         <div class="container">
             {% for message in app.flashes('notice') %}
                 <div class="flash-notice">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {% for message in app.flashes('error') %}
+                <div class="flash-error">
                     {{ message }}
                 </div>
             {% endfor %}
@@ -22,6 +31,8 @@
                     {{ form_start(form) }}
 
                     {{ form_widget(form) }}
+
+                    <div class="g-recaptcha" data-sitekey="{{ apiPublic }}"></div>
 
                     <button type="submit">Envoyer</button>
 
