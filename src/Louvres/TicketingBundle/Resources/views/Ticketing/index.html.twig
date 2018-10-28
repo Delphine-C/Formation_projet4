@@ -74,7 +74,7 @@
                 $('#louvres_ticketingbundle_booking_type_1').prop('checked', true);
             }
 
-            if (new Date().getHours() >= 8) {
+            if (new Date().getHours() >= 14) {
                 showHide();
             }
 
@@ -91,7 +91,7 @@
                         day: 'numeric'
                     });
 
-                    if (dateText === today && new Date().getHours() >= 8) {
+                    if (dateText === today && new Date().getHours() >= 14) {
                         showHide();
                     } else {
                         $('#form_booking_type').show();
