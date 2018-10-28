@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eabc95ce-a7b4-41a5-ae91-6e7e963c24f9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,20 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Booking.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Booking.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="64" column="22" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+            <state relative-caret-position="120">
+              <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -65,7 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>stripeToken</find>
       <find>email</find>
       <find>services</find>
       <find>date</find>
@@ -95,6 +86,7 @@
       <find>api</find>
       <find>API</find>
       <find>louvre</find>
+      <find>label +</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,7 +134,6 @@
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/OrderController.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/DTO/ContactDTO.php" />
-        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php" />
         <option value="$PROJECT_DIR$/tests/Louvres/TicketingBundle/Controller/TicketingControllerTest.php" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
@@ -152,8 +143,9 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Contact/contact.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/ContactController.php" />
-        <option value="$PROJECT_DIR$/web/assets/css/main.css" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php" />
+        <option value="$PROJECT_DIR$/web/assets/css/main.css" />
       </list>
     </option>
   </component>
@@ -242,8 +234,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
+    <option name="x" value="207" />
+    <option name="y" value="298" />
     <option name="width" value="1833" />
     <option name="height" value="555" />
   </component>
@@ -303,16 +295,6 @@
               <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Louvres" type="462c0819:PsiDirectoryNode" />
-              <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Ticketing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
@@ -407,18 +389,18 @@
       <workItem from="1540465788262" duration="7433000" />
       <workItem from="1540539702912" duration="3736000" />
       <workItem from="1540625825551" duration="5505000" />
-      <workItem from="1540714954311" duration="1473000" />
+      <workItem from="1540714954311" duration="2293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301128000" />
+    <option name="totallyTimeSpent" value="301948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.21779859" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.19906323" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.1305842" />
@@ -725,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/order.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
@@ -760,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="1665" column="1" selection-start-line="1665" selection-start-column="1" selection-end-line="1665" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Mail/booking.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -774,17 +742,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="66" column="7" lean-forward="true" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="1673" column="25" lean-forward="true" selection-start-line="1673" selection-start-column="25" selection-end-line="1673" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
         </state>
       </provider>
     </entry>

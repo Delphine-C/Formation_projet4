@@ -1665,6 +1665,11 @@ input[type="radio"] + label,
     display: inline-block
 }
 
+label + ul {
+    color: red;
+    list-style-type: none;
+}
+
 form input[type="text"],
 form input[type="email"],
 input[type="password"],
