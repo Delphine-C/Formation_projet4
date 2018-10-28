@@ -42,6 +42,17 @@
 			)
 				.appendTo($body);
 
+			window.onscroll = function() {myFunction()};
+
+			var navbar = document.getElementById("nav");
+
+			function myFunction() {
+				if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+					navbar.classList.add("sticky")
+				} else {
+					navbar.classList.remove("sticky");
+				}
+			}
 		// Panel.
 			$(
 				'<div id="navPanel">' +

@@ -1995,13 +1995,28 @@ button.alt:active,
 /* Nav */
 
 #nav {
-    position: absolute;
-    top: 3em;
+    position: fixed;
+    top: 0em;
+    padding-top: 3em;
     left: 0;
     width: 100%;
     cursor: default;
+    z-index: 12;
+    overflow: hidden;
 }
 
+.sticky {
+    padding-top: 1em!important;
+    padding-bottom: 1em!important;
+
+    top: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: solid 2px #e5e5e5;
+}
+#nav > ul {
+    margin-bottom: 0;
+}
 #nav > ul > li {
     display: inline-block;
     padding-right: 2em;
