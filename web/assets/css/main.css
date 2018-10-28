@@ -26,6 +26,11 @@ section, summary, time, mark, audio, video {
     vertical-align: baseline;
 }
 
+.g-recaptcha {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -1688,7 +1693,7 @@ form textarea {
     border-radius: 4px;
     line-height: 1.25em;
     padding: 0.75em 1em 0.75em 1em;
-    margin-bottom: 1em!important;
+    margin-bottom: 1em !important;
 }
 
 form input[type="number"] {
@@ -2006,17 +2011,19 @@ button.alt:active,
 }
 
 .sticky {
-    padding-top: 1em!important;
-    padding-bottom: 1em!important;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
 
     top: 0;
     width: 100%;
     background-color: white;
     border-bottom: solid 2px #e5e5e5;
 }
+
 #nav > ul {
     margin-bottom: 0;
 }
+
 #nav > ul > li {
     display: inline-block;
     padding-right: 2em;
@@ -2746,5 +2753,4 @@ button.alt:active,
         margin-left: 0;
         border-left: 0;
     }
-
 }
