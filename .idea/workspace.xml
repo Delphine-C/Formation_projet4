@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eabc95ce-a7b4-41a5-ae91-6e7e963c24f9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Contact/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Contact/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,21 +34,21 @@
     <favorites_list name="Formation_projet4" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <leaf>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="64">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/ContactController.php">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+            <state relative-caret-position="264">
+              <caret line="1665" column="1" selection-start-line="1665" selection-start-column="1" selection-end-line="1665" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -76,11 +75,11 @@
       <find>closeText</find>
       <find>flash-notice</find>
       <find>#footer</find>
-      <find />
+      <find>ul.links li:first-child</find>
       <find>media</find>
       <find>input</find>
-      <find />
-      <find />
+      <find>form select</find>
+      <find>form selec</find>
       <find>for</find>
       <find>numb</find>
       <find>number</find>
@@ -88,8 +87,7 @@
       <find>#logo</find>
       <find>h1</find>
       <find>header</find>
-      <find />
-      <find>louvre</find>
+      <find>#header h1</find>
       <find>h2</find>
       <find>arvo</find>
       <find>peop</find>
@@ -97,6 +95,7 @@
       <find>get</find>
       <find>api</find>
       <find>API</find>
+      <find>louvre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,13 +139,11 @@
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/web/assets/css/main.css" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/VisitorType.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Form/BookingType.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/OrderController.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/DTO/ContactDTO.php" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Entity/Booking.php" />
-        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php" />
         <option value="$PROJECT_DIR$/tests/Louvres/TicketingBundle/Controller/TicketingControllerTest.php" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
@@ -156,6 +153,8 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Contact/contact.html.twig" />
         <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/ContactController.php" />
+        <option value="$PROJECT_DIR$/web/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig" />
       </list>
     </option>
   </component>
@@ -243,9 +242,9 @@
       <path value="$PROJECT_DIR$/vendor/bin/.phpunit" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
     <option name="width" value="1833" />
     <option name="height" value="555" />
   </component>
@@ -287,14 +286,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Louvres" type="462c0819:PsiDirectoryNode" />
               <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Louvres" type="462c0819:PsiDirectoryNode" />
-              <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -305,16 +296,6 @@
               <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Louvres" type="462c0819:PsiDirectoryNode" />
-              <item name="TicketingBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Contact" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
@@ -325,6 +306,24 @@
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Ticketing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Formation_projet4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Formation_projet4" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -400,28 +399,28 @@
       <workItem from="1540383043795" duration="6477000" />
       <workItem from="1540465788262" duration="7433000" />
       <workItem from="1540539702912" duration="3736000" />
-      <workItem from="1540625825551" duration="3600000" />
+      <workItem from="1540625825551" duration="5505000" />
+      <workItem from="1540714954311" duration="1183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297750000" />
+    <option name="totallyTimeSpent" value="300838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.21779859" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.1305842" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32943013" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.21779859" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32943013" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" sideWeight="0.121993124" side_tool="true" weight="0.1787666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -431,26 +430,27 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.0395189" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8780069" visible="true" weight="0.22404371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.1305842" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info id="Favorites" order="2" sideWeight="0.121993124" side_tool="true" weight="0.1787666" />
     </layout-to-restore>
@@ -687,17 +687,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="1990" column="12" lean-forward="true" selection-start-line="1990" selection-start-column="12" selection-end-line="1990" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/TicketingController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#147#204#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -705,16 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#153#187#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="69" column="33" lean-forward="true" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -736,9 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Contact/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -779,8 +755,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Controller/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="57" column="92" selection-start-line="57" selection-start-column="92" selection-end-line="57" selection-end-column="92" />
+        <state relative-caret-position="876">
+          <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="16" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="1665" column="1" selection-start-line="1665" selection-start-column="1" selection-end-line="1665" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Louvres/TicketingBundle/Resources/views/Ticketing/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>

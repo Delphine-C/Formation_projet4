@@ -1661,6 +1661,10 @@ input[type="radio"] + label,
     display: inline-block !important;
 }
 
+#form_booking_type {
+    display: inline-block
+}
+
 form input[type="text"],
 form input[type="email"],
 input[type="password"],

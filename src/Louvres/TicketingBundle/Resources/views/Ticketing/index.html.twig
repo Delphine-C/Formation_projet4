@@ -67,13 +67,14 @@
                 }
             }
 
+            $('#louvres_ticketingbundle_booking_type_0,label[for="louvres_ticketingbundle_booking_type_0"]').wrapAll('<div id="form_booking_type"></div>');
+
             function showHide() {
-                $('#louvres_ticketingbundle_booking_type_0').hide();
-                $('label[for="louvres_ticketingbundle_booking_type_0"]').hide();
-                $('#louvres_ticketingbundle_booking_type_1').attr('checked', true);
+                $('#form_booking_type').hide();
+                $('#louvres_ticketingbundle_booking_type_1').prop('checked', true);
             }
 
-            if (new Date().getHours() >= 14) {
+            if (new Date().getHours() >= 8) {
                 showHide();
             }
 
@@ -90,12 +91,12 @@
                         day: 'numeric'
                     });
 
-                    if (dateText === today && new Date().getHours() >= 14) {
+                    if (dateText === today && new Date().getHours() >= 8) {
                         showHide();
                     } else {
-                        $('#louvres_ticketingbundle_booking_type_0').show().attr('checked', true);
-                        $('label[for="louvres_ticketingbundle_booking_type_0"]').show();
-
+                        $('#form_booking_type').show();
+                        $('#louvres_ticketingbundle_booking_type_1').prop('checked', false);
+                        $('#louvres_ticketingbundle_booking_type_0').prop('checked', true);
                     }
                 }
             });
