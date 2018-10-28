@@ -44,6 +44,7 @@ class OrderController extends Controller
 
             $booking = $request->getSession()->get('resa');
             $booking->setPrice($prix);
+            $booking->setOrderNum($chargeID);
             $this->getDoctrine()->getManager()->persist($booking);
             $this->getDoctrine()->getManager()->flush();
 

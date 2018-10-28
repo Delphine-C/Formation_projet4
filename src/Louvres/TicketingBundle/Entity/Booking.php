@@ -27,6 +27,13 @@ class Booking
     /**
      * @var string
      *
+     * @ORM\Column(name="order_num", type="string", length=255)
+     */
+    private $orderNum;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="name", type="string", length=255)
      * @Assert\NotBlank()
      * @Assert\Length(
@@ -57,14 +64,10 @@ class Booking
      *     minMessage = "La date de visite ne peut être antérieure à aujourd'hui.",
      *     maxMessage = "Aucun billet ne peut être pris pour une date de visite supérieure à 1 an."
      * )
-     * @Assert\Expression(
-     *     "this.getDateVisit() in ['tuesday','first day of may','first day of november','December 25th']",
-     *     message="Le musée est fermé le mardi et les jours fériés (1er mai, 1er novembre et 25 décembre)."
-     * )
-     * @Assert\NotEqualTo("", message="Le musée est fermé le mardi.")
-     * @Assert\NotEqualTo("", message="Le musée est fermé le 1er mai.")
-     * @Assert\NotEqualTo("", message="Le musée est fermé le 1er novembre.")
-     * @Assert\NotEqualTo("", message="Le musée est fermé le 25 décembre.")
+     * @Assert\NotEqualTo("tuesday", message="Le musée est fermé le mardi.")
+     * @Assert\NotEqualTo("first day of may", message="Le musée est fermé le 1er mai.")
+     * @Assert\NotEqualTo("first day of november", message="Le musée est fermé le 1er novembre.")
+     * @Assert\NotEqualTo("December 25th", message="Le musée est fermé le 25 décembre.")
      */
     private $dateVisit;
 
@@ -111,6 +114,27 @@ class Booking
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set orderNum
+     *
+     * @param string $orderNum
+     *
+     */
+    public function setOrderNum($orderNum)
+    {
+        $this->orderNum = $orderNum;
+    }
+
+    /**
+     * Get orderNum
+     *
+     * @return string
+     */
+    public function getOrderNum()
+    {
+        return $this->orderNum;
     }
 
     /**
